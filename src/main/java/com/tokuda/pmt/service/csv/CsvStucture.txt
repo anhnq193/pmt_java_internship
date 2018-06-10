@@ -1,0 +1,55 @@
+CSVfile
+    0.Mã sản phẩm           productCode
+    1.thể loại              type???
+    2.nhà sản xuất          makerId
+    3.tên mặt hàng          productName
+    4.màu sắc               colorId
+    5.kích cỡ               sizeId
+    6.nhận xét              note
+    7.giá mua               stockPrice
+    8.giá loại trừ thuế     notaxPrice
+    9.giá bao gồm thuế      taxPrice
+    10.giá thành viên       memberPrice
+    11.hàng tồn kho         availableNumber
+
+ProductEntity
+    private int id;                 auto
+    private int shop;             loginAttr
+    private byte isEnable;
+    private String productName;     3
+    private String productCode;     0
+    private int memberPrice;        10
+    private Integer stockPrice;     7
+    private Integer notaxPrice;     8
+    private Integer taxPrice;       9
+    private String sizeText;
+    private String colorText;
+    private Integer sizeId;         5
+    private Integer colorId;        4
+    private int makerId;            2
+    private int supplierId;         loginAttr
+    private String notes;           6
+    private Timestamp createdDate;
+    private Timestamp updatedDate;
+    private int status;
+
+StockEntity
+    private int id;                 auto
+    private int product;          getFromProductcode
+    private int shop;             loginAttr
+    private int stockNumber;        +11
+    private int availableNumber;    +11
+    private Timestamp createdDate;
+    private Timestamp updatedDate;
+
+InStockEntity
+    private int id;                 auto
+    private int product;          getFromProductcode
+    private int shop;             loginAttr
+    private Integer inNumber;       11
+    private Integer purchasedPrice;
+    private Integer orderStatus;
+    private Timestamp orderDate;
+    private Timestamp inDate;
+    private Timestamp createdDate;
+    private Timestamp updatedDate;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .main{
+            height: 100%;
+            width: 100%;
+            background-image: url("/img/mountain.jpg");
+            background-repeat: round;
+        }
+        .login{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="login">
+        <img src="/img/title.jpg">
+        <form action="/login" th:action="@{/login}"
+              method="post">
+            <p>
+                Username:
+            </p>
+            <input type="text" name="username">
+            <p>Password:</p>
+            <input type="password" name="password">
+            <p>
+                <button type="submit">Login</button>
+            </p>
+        </form>
+    </div>
+</div>
+</body>
+</html>
